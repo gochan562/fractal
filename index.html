@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mandelbrot Explorer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Mandelbrot Explorer</h1>
+
+    <div>
+        <label for="palette">Color:</label>
+        <select id="palette">
+            <option value="ocean">Ocean</option>
+            <option value="violet">Violet</option>
+            <option value="ember">Ember</option>
+        </select>
+
+        <label for="iterations">Iterations:</label>
+        <input type="range" id="iterations" min="50" max="500" step="50" value="150">
+        <span id="iteration-value">150</span>
+        <button id="reset">reset</button>
+    </div>
+    <canvas id="fractal" aria-label="Mandelbrot fractal"></canvas>
+
+    <p>scroll to zoom, drag tto move around!</p>
+</body>
+</html>
