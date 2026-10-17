@@ -19,3 +19,5 @@ The UI is simple because I wanted to do it in a short time (not to delay my othe
 ## others (for reviewers)
 The contributor name "zubeiyang" is myself, it's because I'm using my mom's laptop. I'm too lazy to set my github account up in her laptop, sorry :)
 
+you can experience the website at https://mandelbrot-frac.netlify.app/
+
