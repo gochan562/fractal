@@ -1,5 +1,55 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #222;
+}
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+
+}
+
+label {
+    margin-right: 5px;
+}
+
+select,
+input,
+button {
+    margin: 5px;
+}
+
+button,
+select,
+input {
+    font: inherit;
+}
+button {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+#julia-controls {
+    margin-top: 10px;
+}
+
+#julia-controls[hidden] {
+    display: none;
+}
+
+
 #fractal {
     display: block;
     width: 100%;
     height: 70vh;
+    margin-top: 15px;
+    cursor: grab;
+}
+#fractal:active {
+    cursor:grabbing;
+}
+
+p{
+    font-size: 14px;
 }
