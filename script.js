@@ -5,13 +5,23 @@ const iterations = document.getElementById("iterations");
 const iterationValue = document.getElementById("iteration-value");
 const resetButton = document.getElementById("reset");
 
+const mode = document.getElementById("mode");
+const juliaControls = document.getElementById("julia-controls");
+const juliaR = document.getElementById("julia-real");
+const juliaI = document.getElementById("julia-imaginary");
+
 let centerX= -0.5;
 let centerY= 0;
 let viewWidth = 3.5;
 
 function mandelbrot(x, y, maxIterations) {
-    let a = 0;
-    let b = 0;
+    let a = mode.value === "julia" ? x: 0;
+    let b = mode.value === "julia"? y:0;
+
+    if (mode.value === "julia") {
+        x = Number(juliaR.value);
+        y = Number(juliaI.value);
+    }
     let count = 0;
     while (a*a+b*b <= 4 && count < maxIterations){
         let newa = a*a-b*b+x;
@@ -124,4 +134,12 @@ canvas.addEventListener("pointerup", () => {
 
 canvas.addEventListener("pointercancel", () => {
     dragging = false;
-})
+});
+
+mode.addEventListener("change", () => {
+    juliaControls.hidden = mode.value !== "julia";
+    centerX = -0.5;
+    centerY = 0;
+    viewWidth = 3.5;
+    drawFractal();
+});
